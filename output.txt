@@ -1,0 +1,20 @@
+#include <iostream>
+#include <fstream>
+
+int main() {
+    std::ofstream outputFile("output.txt");
+
+    if (outputFile.is_open()) {
+        // Write the result to the output file
+        outputFile << "[A, B, C, D] = [0, 0, 0, 1], Z = 1\n";
+
+        // Close the output file
+        outputFile.close();
+
+        std::cout << "Output file created successfully." << std::endl;
+    } else {
+        std::cerr << "Unable to create output file." << std::endl;
+    }
+
+    return 0;
+}
